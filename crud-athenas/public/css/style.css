@@ -1,0 +1,159 @@
+.required:after {
+    content: "*";
+    color: red;
+}
+
+select[readonly] {
+    background: #eee;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.select2-container .select2-selection--single {
+    height: 37px !important;
+    width: 100%;
+}
+
+.select2-selection__rendered {
+    font-size: 0.75rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Select2 ReadOnly Start*/
+select[readonly].select2-hidden-accessible + .select2-container {
+    pointer-events: none;
+    touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible
+    + .select2-container
+    .select2-selection {
+    background: #eee;
+    box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible
+    + .select2-container
+    .select2-selection__arrow,
+select[readonly].select2-hidden-accessible
+    + .select2-container
+    .select2-selection__clear {
+    display: none;
+}
+
+/*Select2 ReadOnly End*/
+
+.modal-loading {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8)
+        url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat;
+}
+
+/* enquanto estiver carregando, o scroll da página estará desativado */
+body.loading {
+    overflow: hidden;
+}
+
+/* a partir do momento em que o body estiver com a classe loading,  o modal aparecerá */
+body.loading .modal-loading {
+    display: block;
+}
+
+.map-container {
+    display: block;
+    height: 60vh;
+}
+
+.map-container > #map {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #aad3df;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.leaflet-marker-shadow {
+    width: 0 !important;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    background: transparent;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.btn-green {
+    background: #6ca914;
+}
+
+.btn-green:hover {
+    filter: brightness(0.9);
+}
+
+.line-card-lot {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 10px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #6ca914;
+}
+
+.painel-header {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.painel-body {
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.painel-body th {
+    background-color: #d1d1d1;
+}
+
+.painel-footer {
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+th.op {
+    min-width: 10px;
+}
+
+th.data {
+    min-width: 200px;
+}
+
+th.title {
+    min-width: 300px;
+}
+
+th.values {
+    min-width: 150px;
+}
+
+th.description {
+    min-width: 500px;
+}
